@@ -1,0 +1,99 @@
+<!-- main section tabs -->
+<section class="main-section-tabs">
+    <div class="container main-section-tabs-wrap">
+        <div class="main-section-category-items">
+            <div class="main-section-category-items-wrap">
+                <div class="main-section-category-item-content">
+                    <div class="category-items-wrap__title">
+                        {{ section.settings.image | image_url: height: 180 | image_tag: class: 'img-fluid' }}
+                        <span class="category-items-wrap__title-label">{{ section.settings.title }}</span>
+                    </div>
+                    <div class="main-section-category-tabs">
+                        <ul class="main-section-category-tabs-link">
+                            {% for block in section.blocks %}
+                                <li>
+                                    <a href="#{{ block.id }}">
+                                        <img class="img-fluid" src="{{ 'web_homepage_BG_tittle.png' | asset_url }}" alt="">
+                                        <span>{{ block.settings.title }}</span>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <div class="main-section-category-tab-content">
+                            {% for block in section.blocks %}
+                                <div id="{{ block.id }}" class="tab-content-items">
+                                    <div class="category-items-wrap__content-wrap">
+                                        <div class="row content-wrap-product">
+                                            {% for product in block.settings.collection.products limit: block.settings.limit %}
+                                                <div class="col-lg-3 col-6 content-wrap-product-items">
+                                                    {% render '_product', card_product: product %}
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <div class="category-items-wrap__content-see-more">
+                                        {% render '_see-more', link-see-more: block.settings.link %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% schema %}
+{
+    "name": "Main tabs",
+    "tag": "section",
+    "class": "section",
+    "blocks": [
+        {
+            "type": "tab",
+            "name": "tab",
+            "settings": [
+                {
+                    "type": "inline_richtext",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "url",
+                    "id": "link",
+                    "label": "Link button"
+                },
+                {
+                    "type": "collection",
+                    "id": "collection",
+                    "label": "Collection"
+                },
+                {
+                    "type": "range",
+                    "id": "limit",
+                    "min": 4,
+                    "max": 16,
+                    "step": 1,
+                    "default": 8,
+                    "label": "Limit"
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "type": "inline_richtext",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+    ]
+}
+{% endschema %}

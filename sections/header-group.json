@@ -1,0 +1,16 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "header": {
+      "type": "main-header",
+      "settings": {
+        "hotline-value": "1900638078",
+        "email": "info@gomicorp.vn"
+      }
+    }
+  },
+  "order": [
+    "header"
+  ]
+}

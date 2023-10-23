@@ -1,0 +1,121 @@
+{
+  "sections": {
+    "main-section-banner": {
+      "type" : "main-section-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/web_homepage_mainbanner.png",
+        "link": ""
+      }
+    },
+    "main-section-gift": {
+      "type": "main-section-gift",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/web_homepage_midbanner_tet.png",
+        "see-more-link": "shopify:\/\/collections\/all",
+        "collection": "envylook",
+        "limit": 8
+      }
+    },
+    "main-section-category": {
+      "type": "main-section-category",
+      "blocks": {
+        "category-0": {
+          "type": "category",
+          "settings": {
+            "title": "Quà tặng sinh nhật",
+            "link": "shopify:\/\/collections\/all",
+            "image": "shopify:\/\/shop_images\/web_homepage_midbanner_normal.png",
+            "collection": "envylook",
+            "limit": 8
+          }
+        },
+        "category-1": {
+          "type": "category",
+          "settings": {
+            "title": "Quà tặng sinh nhật",
+            "link": "shopify:\/\/collections\/all",
+            "image": "shopify:\/\/shop_images\/web_homepage_midbanner_normal.png",
+            "collection": "envylook",
+            "limit": 8
+          }
+        },
+        "category-2": {
+          "type": "category",
+          "settings": {
+            "title": "Quà tặng sinh nhật",
+            "link": "shopify:\/\/collections\/all",
+            "image": "shopify:\/\/shop_images\/web_homepage_midbanner_normal.png",
+            "collection": "envylook",
+            "limit": 8
+          }
+        }
+      },
+      "block_order": [
+        "category-0",
+        "category-1",
+        "category-2"
+      ],
+      "settings": {
+        "title-line-1": "Gomi gift tập trung hơn <span>1000<span> sản phẩm",
+        "title-line-2": "Quà tặng và bộ quà tặng tết cho doanh nghiệp"
+      }
+    },
+    "main-section-tabs": {
+      "type": "main-section-tabs",
+      "blocks": {
+        "tabs-0": {
+          "type": "tab",
+          "settings": {
+            "title": "Quà tặng 100.000đ",
+            "link": "shopify:\/\/collections\/all",
+            "collection": "envylook",
+            "limit": 8
+          }
+        },
+        "tabs-1": {
+          "type": "tab",
+          "settings": {
+            "title": "Từ 100.000đ đến 300.000đ",
+            "link": "shopify:\/\/collections\/all",
+            "collection": "envylook",
+            "limit": 8
+          }
+        },
+        "tabs-2": {
+          "type": "tab",
+          "settings": {
+            "title": "Từ 500.000đ đến 700.000đ ",
+            "link": "shopify:\/\/collections\/all",
+            "collection": "envylook",
+            "limit": 8
+          }
+        },
+        "tabs-3": {
+          "type": "tab",
+          "settings": {
+            "title": "Quà tặng cao cấp",
+            "link": "shopify:\/\/collections\/all",
+            "collection": "envylook",
+            "limit": 8
+          }
+        }
+      },
+      "block_order": [
+        "tabs-0",
+        "tabs-1",
+        "tabs-2",
+        "tabs-3"
+      ],
+      "settings": {
+        "title": "Quà tặng theo ngân sách",
+        "image": "shopify:\/\/shop_images\/web_homepage_midbanner_normal.png"
+      }
+    }
+  },
+  "order": [
+    "main-section-banner",
+    "main-section-gift",
+    "main-section-category",
+    "main-section-tabs"
+  ]
+}

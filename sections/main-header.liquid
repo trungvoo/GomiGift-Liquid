@@ -1,0 +1,53 @@
+<header class="header-main">
+    <div class="container">
+        <div class="row header-main-content">
+            <div class="col-lg-7 col-12 header-main-wrap">
+                <div class="header-main-wrap-logo">
+                    <a class="d-block" href="/">
+                        <img class="img-fluid" src="{{ 'web_homepage_logo.png' |  asset_url  }}" alt="">
+                    </a>
+                </div>
+                <div class="header-main-wrap-search">
+                    <div class="header-main-wrap-search-input">
+                        <input type="text" placeholder="Tìm kiếm ...">
+                        <i class='bx bx-search-alt'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 d-lg-flex d-none header-main-wrap-contact">
+                <div class="header-main-wrap-contact-phone">
+                    <img src="{{ 'web_homepage_icon_head1.png' | asset_url }}" alt="">
+                    <div>
+                        <a href="tel:{{ section.settings.hotline-value }}">{{ section.settings.hotline-value }}</a>
+                    </div>
+                </div>
+                <div class="header-main-wrap-contact-mail">
+                    <img src="{{ 'web_homepage_icon_head2.png' | asset_url }}" alt="">
+                    <div>
+                        <span>{{ section.settings.email }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{%  schema  %} 
+{
+    "name": "Main Header",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+            "type": "inline_richtext",
+            "id": "hotline-value",
+            "label": "Hotline Value Top"
+        },
+        {
+        "type": "inline_richtext",
+        "id": "email",
+        "label": "Email Top"
+        }
+    ]
+}
+{% endschema %}

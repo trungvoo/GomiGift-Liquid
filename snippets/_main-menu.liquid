@@ -1,0 +1,19 @@
+<!-- main nav -->
+<section class="main-section-nav">
+    <div class="container main-section-nav-wrap">
+        <ul class="main-section-nav-wrap-list">
+            <li class="main-section-nav-wrap-items">
+                <a href="">
+                    Bộ quà Tết
+                </a>
+            </li>
+            {% for link in linklists.menu-main-gift.links %}
+                <li class="main-section-nav-wrap-items">
+                    <a href="{{ link.url }}">
+                        {{ link.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

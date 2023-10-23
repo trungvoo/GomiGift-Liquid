@@ -1,0 +1,21 @@
+<!-- main banner -->
+<section class="main-section-banner">
+    <div class="main-section-banner-wrap">
+        {{ section.settings.image | image_url: height: 600 | image_tag: class: 'img-fluid' }}
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Main Banner",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image banner"
+        }
+    ]
+}
+{% endschema %}

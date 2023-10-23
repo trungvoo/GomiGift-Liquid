@@ -1,0 +1,20 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "main-footer",
+      "settings": {
+        "title": "GIẢI PHÁP QUÀ TẶNG DOANH NGHIỆP",
+        "desc": "Gomi Gift là trang bán lẻ đồ tiêu dùng Hàn Quốc hàng đầu tại Việt Nam. Với tiêu chí Find Your Korean Lifestyle, Gomi luôn muốn đồng hành cùng khánh hàng tìm kiếm những sản phẩm tin dùng từ Hàn Quốc đến với người tiêu dùng tại Việt Nam.",
+        "address": "Trụ sở: 302 Nguyễn văn Đậu, Q.Bình Thạnh, TP.HCM",
+        "hotline-text": "1900 638 078",
+        "hotline-value": "1900638078",
+        "email": "info@gomicorp.vn"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
