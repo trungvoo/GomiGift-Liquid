@@ -110,12 +110,20 @@
         "title": "Quà tặng theo ngân sách",
         "image": "shopify:\/\/shop_images\/web_homepage_midbanner_normal.png"
       }
+    },
+    "main-section-home-contact": {
+      "type": "main-section-home-contact",
+      "settings": {
+        "title": "shopify:\/\/collections\/all",
+        "background-color": "#000"
+      }
     }
   },
   "order": [
     "main-section-banner",
     "main-section-gift",
     "main-section-category",
-    "main-section-tabs"
+    "main-section-tabs",
+    "main-section-home-contact"
   ]
 }
