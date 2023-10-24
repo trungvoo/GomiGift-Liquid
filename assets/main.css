@@ -751,7 +751,7 @@ body {
     outline: none;
 }
 
-.contact-mail-wrap-home__input a {
+.contact-mail-wrap-home__input button {
     font-size: 16px;
     font-weight: 500;
     color: #fff;
@@ -759,9 +759,24 @@ body {
     font-family: "AveraStd-Bold";
 }
 
-.contact-mail-wrap-home__input a:hover {
+.contact-mail-wrap-home__input button:hover {
     color: #fff;
     background: linear-gradient(0deg, rgba(18, 158, 70, 1) 80%, rgba(18, 158, 70, 0.7232142857142857) 100%);
+}
+
+.contact-mail-wrap-home-label{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.contact-mail-wrap-home-label svg {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.contact-mail-wrap-home-label span{
+    color: #fff;
 }
 
 @media only screen and (max-width: 991px) {

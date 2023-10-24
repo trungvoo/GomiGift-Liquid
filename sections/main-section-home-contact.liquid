@@ -11,10 +11,37 @@
         <div class="contact-mail-wrap-home__title">
             {{ section.settings.title }}
         </div>
-        <div class="contact-mail-wrap-home__input">
-            <input type="text" placeholder="Email của bạn">
-            <a href="" class="btn">Gửi ngay</a>
-        </div>
+        {% form 'customer'%}
+            <div class="contact-mail-wrap-home__input">
+                <input type="hidden" name="contact[tags]" value="newsletter">
+                <input type="email"
+                    name="contact[email]"
+                    value="{{ form.email }}"
+                    autocomplete="email"
+                    {% if form.errors %}
+                      autofocus
+                    {% endif %}
+                    required
+                    placeholder="Email của bạn">
+                <button type="submit" name="commit" id="Subscribe" class="btn">Gửi ngay</button>
+            </div>
+            {%- if form.errors -%}
+                <div class="contact-mail-wrap-home-label">
+                    {%- render 'icon-error' -%}
+                    <span>
+                        {{ form.errors.messages.email -}}
+                    </span>
+                </div>
+            {%- endif -%}
+            {%- if form.posted_successfully? -%}
+                <div class="contact-mail-wrap-home-label">
+                    {% render 'icon-success' -%}
+                    <span>
+                        {{- 'newsletter.success' | t }}
+                    </span>
+                </div>
+            {%- endif -%}
+        {% endform %}
     </div>
 </section>
 

@@ -1,0 +1,129 @@
+{{ 'contact.css' | asset_url | stylesheet_tag }}
+
+{% render '_breadcrumb' %}
+
+<!-- main contact -->
+<section class="main-section-contact-page">
+    <div class="container main-section-contact-page-wrap">
+        <div class="row main-section-contact-page-wrap-content">
+            <div class="col-lg-6 main-section-contact-page-wrap-info">
+                <div class="main-section-contact-page-wrap-info-title">
+                    Trụ sở chính
+                    <div>{{ section.settings.address }}</div>
+                </div>
+                <div class="main-section-contact-page-wrap-info-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9592706311387!2d106.69387175366998!3d10.814428903646084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528ebda22c199%3A0x599041b23a93b5cf!2zMzAyIE5ndXnhu4VuIFbEg24gxJDhuq11LCBQaMaw4budbmcgMTEsIELDrG5oIFRo4bqhbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1697776259670!5m2!1sen!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="main-section-contact-page-wrap-info-mid">
+                    Liên lạc với Gomi Gift
+                    <div class="main-section-contact-page-wrap-info-mid-items">
+                        <img class="img-fluid" src="{{ 'web_homepage_icon_head1.png' | asset_url }}" alt="">
+                        <a href="tel:{{ section.settings.hotline_value }}">{{ section.settings.hotline_text }}</a>
+                    </div>
+                    <div class="main-section-contact-page-wrap-info-mid-items">
+                        <img class="img-fluid" src="{{ 'web_homepage_icon_head2.png' | asset_url }}" alt="">
+                        <span>Email: {{ section.settings.email }}</span>
+                    </div>
+                </div>
+                <div class="main-section-contact-page-wrap-info-bottom">
+                    {% for block in section.blocks %}
+                        <a href="{{ block.settings.link }}">
+                            {{ block.settings.image | image_url: height: 55 | image_tag: class: 'img-fluid' }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-6 main-section-contact-page-wrap-form">
+                <form action="">
+                    <div class="main-section-contact-page-wrap-form-title">
+                        Gửi email báo giá
+                        <p>Chúng tôi sẽ liên hệ lại với bạn sớm nhất</p>
+                    </div>
+                    <div class="contact-page-wrap-form-content">
+                        <div class="contact-page-wrap-form-content-items">
+                            <p>Họ và tên<span>*</span></p>
+                            <input type="text">
+                        </div>
+                        <div class="row contact-page-wrap-form-content-items">
+                            <div class="col-6 contact-page-wrap-form-content-items-col">
+                                <p>Email<span>*</span></p>
+                                <input type="text">
+                            </div>
+                            <div class="col-6 contact-page-wrap-form-content-items-col">
+                                <p>SĐT<span>*</span></p>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="contact-page-wrap-form-content-items">
+                            <p>Nội dung</p>
+                            <textarea name="" id="" rows="6" placeholder="Nội dung liên hệ"></textarea>
+                        </div>
+                    </div>
+                    <div class="contact-page-wrap-form-content-bottom">
+                        <div class="row">
+                            <div class="col-6 contact-page-wrap-form-content-bottom-items">
+                                <div class="g-recaptcha" data-sitekey="6Lcty7YoAAAAAESwhxafMhaEwntFXJrqxpCaf1n8"></div>
+                            </div>
+                            <div class="col-6 contact-page-wrap-form-content-bottom-items">
+                                <button type="submit" class="btn">
+                                    Gửi ngay
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Main Contact",
+    "tag": "section",
+    "class": "section",
+    "blocks": [
+        {
+            "type": "block",
+            "name": "block",
+            "settings": [
+                {
+                    "type": "url",
+                    "id": "link",
+                    "label": "Link button"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "type": "inline_richtext",
+            "id": "address",
+            "label": "Address"
+        },
+        {
+            "type": "inline_richtext",
+            "id": "hotline_text",
+            "label": "Hotline Text"
+        },
+        {
+            "type": "inline_richtext",
+            "id": "hotline_value",
+            "label": "Hotline Value"
+        },
+        {
+            "type": "inline_richtext",
+            "id": "email",
+            "label": "Email"
+        }
+    ]
+}
+{% endschema %}

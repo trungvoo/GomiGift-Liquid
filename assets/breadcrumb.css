@@ -1,0 +1,42 @@
+/* #region main breadcrumb */
+
+.main-section-breadcrumb {
+    height: 40px;
+    background-color: #f9f9f9;
+}
+
+.main-section-breadcrumb-wrap {
+    height: 100%;
+}
+
+.main-section-breadcrumb-wrap nav {
+    height: 100%;
+}
+
+.main-section-breadcrumb ol {
+    margin: 0;
+    height: 100%;
+    align-items: center;
+}
+
+.main-section-breadcrumb li {
+    font-family: "AveraStd-Bold";
+}
+
+.main-section-breadcrumb li a {
+    color: #606060;
+}
+
+.main-section-breadcrumb li.active {
+    color: #000;
+}
+
+@media only screen and (max-width: 991px) {
+    .main-section-breadcrumb li {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 661px) {}
+
+/* #endregion main breadcrumb */
