@@ -76,11 +76,17 @@
                         <div class="contact-page-wrap-form-content-items">
                             <p>Nội dung</p>
                             <textarea 
-                            name="contact[{{ 'templates.contact.form.comment' | t }}]" 
+                            name="contact[Nội dung]" 
                             id="ContactForm-body" rows="6" placeholder="Nội dung liên hệ"></textarea>
                         </div>
                         <div class="contact-page-wrap-form-content-items contact-page-wrap-form-content-items--label">
-
+                            {%- if form.posted_successfully? -%}
+                                {% render 'icon-success' %}
+                                <span class="text-success">Đã gửi thư liên hệ. Chúng tôi sẽ phản hồi cho bạn trong thời gian sớm nhất</span>
+                            {%- elsif form.errors -%}
+                                {% render 'icon-error' %}
+                                <span class="text-danger">Email không hợp lệ, xin vui lòng thử lại</span>
+                            {%- endif -%}
                         </div>
                     </div>
                     <div class="contact-page-wrap-form-content-bottom">
