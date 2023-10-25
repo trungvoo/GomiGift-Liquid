@@ -1,16 +1,15 @@
 {
   "sections": {
     "main-section-banner": {
-      "type" : "main-section-banner",
+      "type": "main-section-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/web_homepage_mainbanner.png",
-        "link": ""
+        "image": "shopify:\/\/shop_images\/web_homepage_mainbanner.png"
       }
     },
     "main-section-gift": {
       "type": "main-section-gift",
       "settings": {
-        "image": "shopify:\/\/shop_images\/web_homepage_midbanner_tet.png",
+        "image": "shopify:\/\/shop_images\/web_homepage_midbanner_tet_2.png",
         "see-more-link": "shopify:\/\/collections\/all",
         "collection": "envylook",
         "limit": 8
@@ -84,7 +83,7 @@
         "tabs-2": {
           "type": "tab",
           "settings": {
-            "title": "Từ 500.000đ đến 700.000đ ",
+            "title": "Từ 500.000đ đến 700.000đ",
             "link": "shopify:\/\/collections\/all",
             "collection": "envylook",
             "limit": 8
