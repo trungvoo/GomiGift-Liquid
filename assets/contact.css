@@ -13,6 +13,14 @@
     margin: 50px auto;
 }
 
+.main-section-contact-page-wrap-info{
+    padding-right: 20px;
+}
+
+.main-section-contact-page-wrap-form {
+    padding-left: 20px;
+}
+
 .main-section-contact-page-wrap-info-title,
 .main-section-contact-page-wrap-form-title{
     font-size: 22px;
@@ -155,6 +163,14 @@
         margin-top: 25px;
         margin-bottom: 20px;
         
+    }
+
+    .main-section-contact-page-wrap-info {
+        padding-right: 10px;
+    }
+    
+    .main-section-contact-page-wrap-form {
+        padding-left: 10px;
     }
 
 
