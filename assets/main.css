@@ -1001,6 +1001,8 @@ body {
 
 /* #endregion main home contact */
 
+/* #endregion main */
+
 /* ============================================================== */
 
 /* #region footer */
@@ -1151,14 +1153,26 @@ body {
         font-size: 12px;
     }
 
+    .footer-wrap-content-info__address img {
+        width: 20px;
+        margin-right: 10px;
+    }
+
     .footer-wrap-content-info__hotline {
-        margin-top: 0;
+        margin-top: 5px;
     }
 
     .footer-wrap-content-info__hotline-phone span,
     .footer-wrap-content-info__hotline-mail span {
         font-size: 12px;
     }
+
+    .footer-wrap-content-info__hotline-phone img,
+    .footer-wrap-content-info__hotline-mail img {
+        width: 20px;
+        margin-right: 10px;
+    }
+
 
 }
 
