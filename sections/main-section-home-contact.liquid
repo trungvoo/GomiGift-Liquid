@@ -11,9 +11,9 @@
         <div class="contact-mail-wrap-home__title">
             {{ section.settings.title }}
         </div>
-        {% form 'customer'%}
+        {% form 'contact'%}
             <div class="contact-mail-wrap-home__input">
-                <input type="hidden" name="contact[tags]" value="newsletter">
+                <input type="hidden" name="contact[Nội dung]" value="Khách hàng cần liên hệ">
                 <input type="email"
                     name="contact[email]"
                     value="{{ form.email }}"
